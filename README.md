@@ -1,3 +1,12 @@
+# **Approach**
+
+This project is built using a suite of libraries I developed called **WizWeb** to streamline development. WizWeb simplifies both back-end and front-end processes, making it faster and more efficient to set up and build applications.
+
+For more information about WizWeb, visit:  
+[https://github.com/ivan006/2024-05-wizweb-fe](https://github.com/ivan006/2024-05-wizweb-fe)
+
+---
+
 # **Setup Instructions**
 
 ## **Back-End Setup**
