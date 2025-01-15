@@ -40,10 +40,18 @@
   ```bash
   npm install
   ```
-  *(Ensure you have npm version 8.18.0 and Node.js version 18.8.0 installed.)*
+  *(I have npm version 8.18.0 and Node.js version 18.8.0 installed.)*
 - Copy `.env.development.example` to `.env.development` and set `VITE_API_BACKEND_URL` to the correct back-end URL.
 - Start the development server:
   ```bash
   npm run dev
   ```
+
+---
+
+
+## **Seeding**
+
+- Using a database management tool, go to the database's `task_statuses` table and create 1 record with the name "Complete".
+- Register an account through the front-end (no need to verify through email).
 
