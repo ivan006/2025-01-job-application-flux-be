@@ -6,21 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('task_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id(); // Primary Key
+            $table->string('name')->unique(); // Status name (e.g., Pending, Completed)
+            $table->text('description')->nullable(); // Optional description
+            $table->timestamps(); // Created at, Updated at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('task_statuses');
     }
