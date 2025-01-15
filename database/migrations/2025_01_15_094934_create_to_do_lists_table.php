@@ -6,21 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('to_do_lists', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id(); // Primary Key
+            $table->string('name'); // Name of the To-Do List
+            $table->text('description')->nullable(); // Optional description
+            $table->timestamps(); // Created at, Updated at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('to_do_lists');
     }
