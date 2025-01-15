@@ -11,7 +11,6 @@ return new class extends Migration
         Schema::create('to_do_lists', function (Blueprint $table) {
             $table->id(); // Primary Key
             $table->string('name'); // Name of the To-Do List
-            $table->text('description')->nullable(); // Optional description
             $table->timestamps(); // Created at, Updated at
         });
     }

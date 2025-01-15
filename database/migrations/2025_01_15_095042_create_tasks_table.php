@@ -6,21 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id(); // Primary Key
+            $table->foreignId('to_do_list_id')->constrained()->cascadeOnDelete(); // FK to To-Do Lists
+            $table->foreignId('status_id')->constrained('task_statuses')->cascadeOnDelete(); // FK to Task Statuses
+            $table->string('name'); // Name of the task
+            $table->timestamps(); // Created at, Updated at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('tasks');
     }
